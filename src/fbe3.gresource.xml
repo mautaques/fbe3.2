@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/lapas/Fbe">
+    <file compressed="true" preprocess="xml-stripblanks">window.ui</file>
+    <file compressed="true">icons/add.png</file>
+    <file compressed="true">icons/connect.png</file>
+    <file compressed="true">icons/delete.png</file>
+    <file compressed="true">icons/move.png</file>
+    <file compressed="true">icons/edit.png</file>
+    <file compressed="true">icons/save.png</file>
+    <file compressed="true">icons/save_as.png</file>
+    <file compressed="true">icons/new_fb.png</file>
+    <file compressed="true">icons/plus-symbolic.svg</file>
+    <file compressed="true">icons/inspect_fb.png</file>
+    <file compressed="true">icons/new_file.png</file>
+    <file compressed="true">icons/directory.png</file>
+    <file compressed="true">icons/left_arrow.png</file>
+    <file compressed="true">icons/right_arrow.png</file>
+    <file compressed="true">icons/big_right_arrow.png</file>
+    <file compressed="true">icons/big_left_arrow.png</file>
+    </gresource>
+</gresources>
