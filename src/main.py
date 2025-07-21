@@ -25,15 +25,8 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw, Gdk
+from window import FbeWindow
 
-try:
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    resource_path = os.path.join(current_dir, 'icons', 'resources.gresource')
-    Gio.resources_load(resource_path)
-except Exception as e:
-    print(f"Erro ao carregar recursos: {e}")
-
-from .window import FbeWindow
 cur_path = os.path.realpath(__file__)
 base_path = os.path.dirname(os.path.dirname(cur_path))
 sys.path.insert(1, base_path)
@@ -63,19 +56,6 @@ class FbeApplication(Adw.Application):
         self.set_accels_for_action('win.add-type', ['<Ctrl><Alt>n'])
         self.set_accels_for_action('win.last-page', ['<Ctrl>b'])
         self.set_accels_for_action('win.export-project', ['<Ctrl>e'])
-
-    def do_startup(self):
-        """
-        Called when the application is starting up.
-        This is the ideal place to load resources and set up icon themes.
-        """
-        Gtk.Application.do_startup(self)
-
-        # Adiciona o caminho do recurso ao tema de ícones
-        # O caminho '/com/lapas/Fbe' é o prefixo definido no resources.gresource.xml
-        icon_theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
-        icon_theme.add_resource_path("/com/lapas/Fbe") # Adicione o prefixo do seu GResource
-
 
     def do_activate(self):
         """
