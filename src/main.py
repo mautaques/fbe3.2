@@ -24,8 +24,8 @@ import os
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Adw, Gdk
-from window import FbeWindow
+from gi.repository import Gtk, Gio, Adw
+from .window import FbeWindow
 
 cur_path = os.path.realpath(__file__)
 base_path = os.path.dirname(os.path.dirname(cur_path))
