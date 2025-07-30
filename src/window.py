@@ -26,9 +26,9 @@ import os
 cur_path = os.path.realpath(__file__)
 base_path = os.path.dirname(os.path.dirname(cur_path))
 sys.path.insert(1, base_path)
-from .fb_editor import FunctionBlockEditor
-from .project_editor import ProjectEditor
-from .xmlParser import *
+from fb_editor import FunctionBlockEditor
+from project_editor import ProjectEditor
+from xmlParser import *
 
 @Gtk.Template(resource_path='/com/lapas/Fbe/window.ui')
 class FbeWindow(Adw.ApplicationWindow):

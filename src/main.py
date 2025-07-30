@@ -25,12 +25,11 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw
-from .window import FbeWindow
+from window import FbeWindow
 
 cur_path = os.path.realpath(__file__)
 base_path = os.path.dirname(os.path.dirname(cur_path))
 sys.path.insert(1, base_path)
-
 
 class FbeApplication(Adw.Application):
     """The main application singleton class."""
@@ -101,7 +100,10 @@ class FbeApplication(Adw.Application):
             self.set_accels_for_action(f"app.{name}", shortcuts)
 
 
-def main(version):
+def main():
     """The application's entry point."""
     app = FbeApplication()
     return app.run(sys.argv)
+
+if __name__ == "__main__":
+   main()
