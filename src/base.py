@@ -1,4 +1,5 @@
 import gi
+
 from gi.repository import GLib, Gio, Gtk, GObject
 
 class PageMixin:

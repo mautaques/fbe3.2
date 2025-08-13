@@ -24,8 +24,14 @@ import os
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
+
 from gi.repository import Gtk, Gio, Adw
-from .window import FbeWindow
+# Corrige o caminho do recurso para ser absoluto e registra antes de importar FbeWindow
+resource_path = os.path.join(os.path.dirname(__file__), 'fbe.gresource')
+Gio.Resource.load(resource_path)._register()
+from window import FbeWindow
+
+
 cur_path = os.path.realpath(__file__)
 base_path = os.path.dirname(os.path.dirname(cur_path))
 sys.path.insert(1, base_path)
@@ -103,3 +109,7 @@ def main(version):
     """The application's entry point."""
     app = FbeApplication()
     return app.run(sys.argv)
+
+if __name__ == "__main__":
+    main(None)
+

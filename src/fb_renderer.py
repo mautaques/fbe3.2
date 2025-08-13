@@ -4,6 +4,7 @@ import gi
 import os
 import math
 import cairo
+
 cur_path = os.path.realpath(__file__)
 base_path = os.path.dirname(os.path.dirname(cur_path))
 sys.path.insert(1, base_path)
