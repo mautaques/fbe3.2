@@ -1,6 +1,5 @@
 from gi.repository import Gtk
 import sys
-import gi
 import os
 import math
 import cairo
