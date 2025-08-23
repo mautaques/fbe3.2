@@ -18,7 +18,7 @@ An application for modelling function blocks based on IEC 61499.
 ## To run FBE:
  1. Clone the FBE repository:
     ```
-    git clone https://github.com/cabralbonin/fbe3_gnome.git
+    git clone https://github.com/cabralbonin/fbe3_2.git
     ```
  3. Open the cloned folder in the terminal:
     ```
